@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    body{
+        min-height: 100vh;
+        background: linear-gradient(#2b1055,#7597de);
+    }
+    header{
+        position: absolute;
+        width: 100%;
+        padding: 30px 100px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 231;
+    }
+    .logo{
+        font-weight: 700;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+    }
+    header ul{
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        justify-content: center;
+        text-align: center;
+    }
+    header ul li{
+        margin-left: 20px;
+    }
+    header ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 6px 15px;
+    }
+    header ul li a:hover{
+        background: white;
+        color: rgb(47, 47, 78);
+    }
+    .active{
+        background: white;
+        color: rgb(47, 47, 78);
+    }
+    section{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        padding: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    /* section::after{
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        padding: 100px;
+        background: linear-gradient(to top,#2b1055,transparent);
+    } */
+    section img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
+    #moon{
+        mix-blend-mode: screen;
+    }
+    .text{
+        position: absolute;
+        font-size: 7.5vw;
+        /* z-index: 566; */
+        color: white;
+        transform: translateY(-100px);
+        /* margin-right: -650px; */
+    }
+    .btn{
+        padding: 8px 30px;
+        border-radius: 40px;
+        color: rgb(47, 47, 78);
+        font-size: 1.5em;
+        background: white;
+        text-decoration: none;
+        border-color: transparent;
+        z-index: 665;
+    }
+    .btn a{
+        text-decoration: none;
+        color: rgb(47, 47, 78);
+    }
+    .btn a:focus{
+        outline: none;
+    }
+    .btn:hover{
+        cursor: pointer;
+    }
+    .lorem{
+        display: block;
+        color: white;
+        padding: 50px;
+        font-size: 1.5em;
+    }
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./stars.png" id="stars" alt="">
+        <img src="./moon.png" id="moon" alt="">
+        <h2 class="text" id="text">MoonLight</h2>
+        <img src="./mountains_behind.png" id="mountains_behind" alt="">
+        <button class="btn" id="btn"><a href="#sec">Explore</a></button>
+        <img src="./mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="lorem" id="sec">
+        <h1 style="width: 100%; text-align: center;">Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus neque velit impedit consequatur, nostrum aspernatur consectetur cumque quos explicabo illum quis odio aut eius quae dolores fugiat repellendus. Doloribus.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde atque explicabo sint veritatis vero voluptas obcaecati illum! Aliquid officia error delectus consectetur nulla suscipit perferendis reiciendis fugiat quae vitae?.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat non, doloremque commodi reprehenderit laudantium eum atque eos necessitatibus eaque omnis aliquam consectetur, nostrum fuga enim accusantium a dolores? Recusandae.</p><br>
+        <h1 style="width: 100%; text-align: center;">Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus neque velit impedit consequatur, nostrum aspernatur consectetur cumque quos explicabo illum quis odio aut eius quae dolores fugiat repellendus. Doloribus.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde atque explicabo sint veritatis vero voluptas obcaecati illum! Aliquid officia error delectus consectetur nulla suscipit perferendis reiciendis fugiat quae vitae?.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat non, doloremque commodi reprehenderit laudantium eum atque eos necessitatibus eaque omnis aliquam consectetur, nostrum fuga enim accusantium a dolores? Recusandae.</p><br>
+        <h1 style="width: 100%; text-align: center;">Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus neque velit impedit consequatur, nostrum aspernatur consectetur cumque quos explicabo illum quis odio aut eius quae dolores fugiat repellendus. Doloribus.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde atque explicabo sint veritatis vero voluptas obcaecati illum! Aliquid officia error delectus consectetur nulla suscipit perferendis reiciendis fugiat quae vitae?.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat non, doloremque commodi reprehenderit laudantium eum atque eos necessitatibus eaque omnis aliquam consectetur, nostrum fuga enim accusantium a dolores? Recusandae.</p><br>
+        <h1 style="width: 100%; text-align: center;">Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus neque velit impedit consequatur, nostrum aspernatur consectetur cumque quos explicabo illum quis odio aut eius quae dolores fugiat repellendus. Doloribus.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde atque explicabo sint veritatis vero voluptas obcaecati illum! Aliquid officia error delectus consectetur nulla suscipit perferendis reiciendis fugiat quae vitae?.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat non, doloremque commodi reprehenderit laudantium eum atque eos necessitatibus eaque omnis aliquam consectetur, nostrum fuga enim accusantium a dolores? Recusandae.</p><br>
+        <h1 style="width: 100%; text-align: center;">Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus neque velit impedit consequatur, nostrum aspernatur consectetur cumque quos explicabo illum quis odio aut eius quae dolores fugiat repellendus. Doloribus.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde atque explicabo sint veritatis vero voluptas obcaecati illum! Aliquid officia error delectus consectetur nulla suscipit perferendis reiciendis fugiat quae vitae?.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat non, doloremque commodi reprehenderit laudantium eum atque eos necessitatibus eaque omnis aliquam consectetur, nostrum fuga enim accusantium a dolores? Recusandae.</p><br>
+    </div>
+
+    <script>
+
+
+        let moon = document.getElementById("moon");
+        let star = document.getElementById("stars");
+        let mountains_behind = document.getElementById("mountains_behind");
+        let mountains_front = document.getElementById("mountains_front");
+        let btn = document.getElementById("btn");
+        let text = document.getElementById("text");
+        let header =document.querySelector('header')
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY
+
+            star.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * .7 + 'px';
+        })
+
+
+    </script>
+</body>
+</html>
